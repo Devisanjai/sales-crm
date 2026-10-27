@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Sales Pipeline</h2>
+<div class="row">
+    {% for stage, opportunities in pipeline.items %}
+    <div class="col-md-3">
+        <h5>{{ stage|title }}</h5>
+        <ul class="list-group">
+            {% for opp in opportunities %}
+            <li class="list-group-item">
+                <strong>{{ opp.title }}</strong><br>
+                {{ opp.customer }} — ₹{{ opp.value }}
+            </li>
+            {% empty %}
+            <li class="list-group-item text-muted">No opportunities</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

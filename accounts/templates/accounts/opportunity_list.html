@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>All Opportunities</h2>
+<a href="{% url 'add_opportunity' %}" class="btn-add">Add Opportunity</a>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Title</th><th>Customer</th><th>Value</th><th>Stage</th>
+    </tr>
+    {% for opp in opportunities %}
+    <tr>
+        <td>{{ opp.title }}</td>
+        <td>{{ opp.customer }}</td>
+        <td>{{ opp.value }}</td>
+        <td>{{ opp.get_stage_display }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

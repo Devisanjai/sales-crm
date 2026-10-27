@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5>Total Leads</h5>
+                <h2>{{ total_leads }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5>Customers</h5>
+                <h2>{{ total_customers }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5>Opportunity</h5>
+                <h2>{{ total_opportunities }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5>Invoices</h5>
+                <h2>{{ total_invoices }}</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
